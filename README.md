@@ -6,7 +6,7 @@ A serverless Reddit bot that fetches news articles of a requested stock ticker.
 
 
 To use this service, post a comment in the /r/investing subreddit with the format `!stocknews $TICKER`
-### Examples 
+## Examples 
 
 `!stocknews $TSLA`
 
@@ -21,10 +21,11 @@ To use this service, post a comment in the /r/investing subreddit with the forma
 3. Parse the stock ticker out of the extracted comments and make a request to the IEX Cloud Financial API to retrieve news for that ticker. 
 4. Reply to the extracted comment with the news articles, formatted using markdown tables. 
 
-### Challenges 
-How to make sure the bot doesn't reply to a comment that it already responded to? 
+## Challenges 
+How do we make sure the bot doesn't reply to a comment that it already responded to? 
 
-After responding to the comment, save the comment via Reddit API. Always check if the comment has been saved before replying. 
+1. Save all comments that we have responded to 
+2. Check if current comment has been saved before replying 
 
 ## Technologies Used
 - Python 
